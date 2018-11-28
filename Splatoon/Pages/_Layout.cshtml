@@ -3,13 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewData["Title"]</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130049195-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-130049195-1');
+    </script>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     @RenderBody()
-    <p>
-        Source: <a href="https://github.com/YDKK/spl.0ko.me/">https://github.com/YDKK/spl.0ko.me/</a>
-    </p>
+    <small>
+        <a asp-page="Index">トップ</a>|
+        <a href="https://github.com/YDKK/spl.0ko.me/">ソースコード</a>|
+        <a asp-page="Privacy">プライバシーポリシー</a>|
+        <a asp-page="License">オープンソースライセンス</a>
+    </small>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
